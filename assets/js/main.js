@@ -210,20 +210,60 @@
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
+    let scrollPosition = window.scrollY + 200;
+    
+    // Find the current visible section
+    let currentSection = null;
+    let minDistance = Number.MAX_VALUE;
+    
     navmenulinks.forEach(navmenulink => {
       if (!navmenulink.hash) return;
       let section = document.querySelector(navmenulink.hash);
       if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
+      
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const distance = Math.abs(scrollPosition - sectionTop);
+      
+      if (scrollPosition >= sectionTop && scrollPosition <= (sectionTop + sectionHeight) && distance < minDistance) {
+        currentSection = navmenulink;
+        minDistance = distance;
       }
-    })
+    });
+    
+    // Remove active class from all links
+    document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+    
+    // Add active class to current section link
+    if (currentSection) {
+      currentSection.classList.add('active');
+    }
   }
+  
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+  
+  /**
+   * Smooth scrolling for anchor links
+   */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+      
+      const headerHeight = document.querySelector('#header').offsetHeight;
+      const targetPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    });
+  });
 
 })();

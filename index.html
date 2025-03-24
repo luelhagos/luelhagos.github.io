@@ -49,7 +49,8 @@
         <li><a href="#luel" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#posts"><i class="bi bi-hdd-stack navicon"></i><span>Posts</span></a></li>
+        <li><a href="#work"><i class="bi bi-code-square navicon"></i><span>Work</span></a></li>
+        <li><a href="#github"><i class="bi bi-github navicon"></i><span>GitHub</span></a></li>
         <li><a href="#visual-diary"><i class="bi bi-images navicon"></i><span>Visual Diary</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
@@ -95,8 +96,6 @@
           I strive to tackle new challenges and continuously evolve in this dynamic field.</p>
       </div><!-- End Section Title -->
     </section><!-- /About Section -->
-
-    </section>
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">
@@ -248,7 +247,7 @@
 
           </div>
 
-          <dev class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Honours and Awards</h3>
             <div class="resume-item">
               <h4><a href="https://www.statistics.gov.rw/about-us/hackathon-competition-2023-edition"
@@ -275,7 +274,7 @@
                 <li>Developed a virtual healthcare app to improve access to healthcare in Africa.</li>
               </ul>
             </div><!-- End Resume Item -->
-          </dev>
+          </div>
 
         </div>
 
@@ -283,104 +282,208 @@
 
     </section><!-- /Resume Section -->
 
-    <!-- Posts Section -->
-    <section id="posts" class="posts section">
-
+    <!-- Work Section (Combined Projects & Posts) -->
+    <section id="work" class="work section">
+      
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Related Posts</h2>
-        <li><a href="https://luelhagos.github.io/posts/Implicit_Euler_method">Implicit Euler method for Ordinary
-            Differential Equations (ODEs) using Python</a></li>
-        <li><a href="https://luelhagos.github.io/posts/MathsPy">Explicit Euler method for Ordinary Differential
-            Equations (ODEs) using Python</a></li>
+        <h2>My Work</h2>
+        <p>Projects and some technical posts.</p>
       </div><!-- End Section Title -->
-
-
-      <!-- Visual Diary Section -->
-
-      <!-- Visual Diary Section -->
-      <section id="visual-diary" class="visual-diary section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Visual Diary</h2>
-          <p>I have a passion for capturing moments through my lens, especially those that showcase the beauty of
-            nature. Take a look...</p>
-          <p><a href="Photos/photography_collection.html" class="btn-view">View My Photography</a></p>
+      
+      <!-- Work Tabs -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mb-4">
+            <ul class="nav nav-tabs d-flex justify-content-center" id="workTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-content" type="button" role="tab" aria-controls="projects-content" aria-selected="true">Projects</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts-content" type="button" role="tab" aria-controls="posts-content" aria-selected="false">Technical Posts</button>
+              </li>
+            </ul>
+          </div>
         </div>
-      </section><!-- /Visual Diary Section -->
-
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>Feel free to reach out—I’m always open to engaging discussions and new opportunities.</p>
-        </div><!-- End Section Title -->
-
-        <div class="container unique-container" data-aos="fade" data-aos-delay="100">
-          <div class="row justify-content-center">
-            <div class="col-lg-3">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>KN 3 Rd, Kigali, Rwanda</p>
+        
+        <div class="tab-content" id="workTabContent">
+          <!-- Projects Tab -->
+          <div class="tab-pane fade show active" id="projects-content" role="tabpanel" aria-labelledby="projects-tab">
+            <div class="row">
+              <!-- Tigrinya GPT-2 Project -->
+              <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title mb-3">Tigrinya GPT-2 Model</h4>
+                    <p class="card-text">I have trained a GPT-2 model from scratch for Tigrinya (ትግርኛ) text generation. The project involved:</p>
+                    <ul>
+                      <li>Collection of approximately 21 million tokens primarily from news sources (90%+)</li>
+                      <li>Training a medium-sized architecture with 51.9 million parameters</li>
+                    </ul>
+                    <p>The model shows promising results in generating coherent Tigrinya text, representing a significant contribution to NLP resources for lower-resource languages.</p>
+                    <div class="mt-4">
+                      <a href="https://huggingface.co/spaces/luel/tigrinya-gpt2-text-generator" class="btn btn-primary me-2" target="_blank">Try the Demo</a>
+                      <a href="https://huggingface.co/luel/gpt2-tigrinya-medium" class="btn btn-outline-primary" target="_blank">Explore the Model</a>
+                    </div>
+                  </div>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
             </div>
-            <div class="col-lg-3">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email</h3>
-                  <p>luelbhagos@gmail.com</p>
+          </div>
+          
+          <!-- Posts Tab -->
+          <div class="tab-pane fade" id="posts-content" role="tabpanel" aria-labelledby="posts-tab">
+            <div class="row">
+              <div class="col-lg-12" data-aos="fade-up">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="mb-4">Technical Articles</h4>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-file-earmark-text me-3 fs-4"></i>
+                        <div>
+                          <a href="https://luelhagos.github.io/posts/Implicit_Euler_method" class="h5 mb-1" target="_blank">
+                            Implicit Euler method for Ordinary Differential Equations (ODEs) using Python
+                          </a>
+                          <p class="text-muted mb-0">A detailed explanation of the Implicit Euler method for solving ODEs with Python implementation</p>
+                        </div>
+                      </li>
+                      <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-file-earmark-text me-3 fs-4"></i>
+                        <div>
+                          <a href="https://luelhagos.github.io/posts/MathsPy" class="h5 mb-1" target="_blank">
+                            Explicit Euler method for Ordinary Differential Equations (ODEs) using Python
+                          </a>
+                          <p class="text-muted mb-0">Implementation and explanation of the Explicit Euler method for solving differential equations</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section><!-- /Work Section -->
 
-        </div>
-
-        <!-- <div class="col-lg-8">
-              <form action="https://luelhagos.github.io/forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                data-aos-delay="200">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+    <!-- GitHub Activity Section -->
+    <section id="github" class="github section light-background">
+      
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>GitHub Activity</h2>
+        <p>My open source contributions and code repositories</p>
+      </div><!-- End Section Title -->
+      
+      <div class="container">
+        <div class="row">
+          <!-- GitHub Contribution Chart -->
+          <div class="col-lg-12 mb-5" data-aos="fade-up">
+            <div class="github-card">
+              <h3>Contribution Activity</h3>
+              <img src="https://ghchart.rshah.org/luelhagos" alt="GitHub Contribution Chart" class="img-fluid" style="width: 100%; background-color: white; border-radius: 8px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+          </div>
+          
+          <!-- GitHub Stats -->
+            <div class="row mt-4">
+              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h4 class="mb-4">GitHub Statistics</h4>
+                    <img src="https://github-readme-stats.vercel.app/api?username=luelhagos&show_icons=true&count_private=true&hide_border=true" alt="GitHub Stats" class="img-fluid mb-3">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luelhagos&layout=compact&hide_border=true" alt="Top Languages" class="img-fluid">
                   </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit">Send Message</button>
-                  </div>
-
                 </div>
-              </form>
-            </div> -->
-
+              </div>
+            </div>
         </div>
+      </div>
+    </section><!-- /GitHub Activity Section -->
 
+    <!-- Visual Diary Section -->
+    <section id="visual-diary" class="visual-diary section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Visual Diary</h2>
+        <p>I have a passion for capturing moments through my lens, especially those that showcase the beauty of
+          nature. Take a look...</p>
+        <p><a href="Photos/photography_collection.html" class="btn-view">View My Photography</a></p>
+      </div>
+    </section><!-- /Visual Diary Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to reach out—I'm always open to engaging discussions and new opportunities.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container unique-container" data-aos="fade" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-3">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>KN 3 Rd, Kigali, Rwanda</p>
+              </div>
+            </div><!-- End Info Item -->
+          </div>
+          <div class="col-lg-3">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>luelbhagos@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+          </div>
         </div>
+      </div>
 
-      </section><!-- /Contact Section -->
+      </div>
+
+      <!-- <div class="col-lg-8">
+            <form action="https://luelhagos.github.io/forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div> -->
+
+      </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
 
   </main>
 
