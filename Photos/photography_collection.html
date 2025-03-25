@@ -144,6 +144,51 @@
             font-style: italic;
             color: #999;
         }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 48%;
+            }
+            
+            .gallery-item img {
+                height: 250px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .section-title {
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-item {
+                width: 100%;
+            }
+            
+            .gallery-item img {
+                height: 220px;
+            }
+            
+            .gallery {
+                gap: 15px;
+            }
+            
+            .header {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .description {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
