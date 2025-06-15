@@ -4,9 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Luel</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Luel Hagos Beyene – Data Scientist & AI Engineer</title>
+  <meta name="description" content="Portfolio and blog of Luel Hagos Beyene, Data Scientist and AI Engineer specializing in NLP, deep learning and data science.">
+  <meta property="og:title" content="Luel Hagos Beyene – Data Scientist & AI Engineer">
+  <meta property="og:description" content="Portfolio and blog of Luel Hagos Beyene showcasing projects in NLP, deep learning, and data science.">
+  <meta property="og:image" content="assets/img/l-bg.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luelhagos.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicons -->
   <link href="assets/img/l.png" rel="icon">
@@ -42,7 +47,7 @@
 
   <header id="header" class="header d-flex flex-column justify-content-center">
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <i class="header-toggle d-xl-none bi bi-list" role="button" aria-label="Toggle navigation" aria-expanded="false"></i>
 
     <nav id="navmenu" class="navmenu">
       <ul>
@@ -63,7 +68,7 @@
     <!-- Home Section -->
     <section id="luel" class="hero section light-background">
 
-      <img src="assets/img/l-bg.jpg" alt="">
+      <img src="assets/img/l-bg.jpg" alt="Hero background image"/>
 
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
@@ -315,15 +320,36 @@
                 <div class="card h-100">
                   <div class="card-body">
                     <h4 class="card-title mb-3">Tigrinya GPT-2 Model</h4>
-                    <p class="card-text">I have trained a GPT-2 model from scratch for Tigrinya (ትግርኛ) text generation. The project involved:</p>
-                    <ul>
-                      <li>Collection of approximately 21 million tokens primarily from news sources (90%+)</li>
-                      <li>Training a medium-sized architecture with 51.9 million parameters</li>
-                    </ul>
-                    <p>The model shows promising results in generating coherent Tigrinya text, representing a significant contribution to NLP resources for lower-resource languages.</p>
+                    <p class="card-text">51M-parameter GPT-2 model trained on 21M Tigrinya tokens.</p>
                     <div class="mt-4">
                       <a href="https://huggingface.co/spaces/luel/tigrinya-gpt2-text-generator" class="btn btn-primary me-2" target="_blank">Try the Demo</a>
                       <a href="https://huggingface.co/luel/gpt2-tigrinya-medium" class="btn btn-outline-primary" target="_blank">Explore the Model</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gemma-3-4B-Tigrinya Project -->
+              <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title mb-3">Gemma-3-4B-Tigrinya</h4>
+                    <p class="card-text">4B-parameter Gemma model fine-tuned for Tigrinya text generation.</p>
+                    <div class="mt-4">
+                      <a href="https://huggingface.co/luel/gemma-3-4b-tigrinya" class="btn btn-outline-primary" target="_blank">Explore the Model</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gemma-3-4B-Tigrinya QA Project -->
+              <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title mb-3">Gemma-3-4B-Tigrinya QA</h4>
+                    <p class="card-text">4B-parameter Gemma model instruction-tuned for Tigrinya question answering.</p>
+                    <div class="mt-4">
+                      <a href="https://huggingface.co/luel/gemma-3-4b-tigrinya-qa" class="btn btn-outline-primary" target="_blank">Explore the Model</a>
                     </div>
                   </div>
                 </div>
@@ -379,12 +405,12 @@
       <div class="container">
         <div class="row">
           <!-- GitHub Contribution Chart -->
-          <div class="col-lg-12 mb-5" data-aos="fade-up">
+          <!-- <div class="col-lg-12 mb-5" data-aos="fade-up">
             <div class="github-card">
               <h3>Contribution Activity</h3>
-              <img src="https://ghchart.rshah.org/luelhagos" alt="GitHub Contribution Chart" class="img-fluid" style="width: 100%; background-color: white; border-radius: 8px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <img src="https://ghchart.rshah.org/luelhagos" alt="GitHub contribution chart for Luel Hagos" loading="lazy" class="img-fluid" style="width: 100%; background-color: white; border-radius: 8px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             </div>
-          </div>
+          </div> -->
           
           <!-- GitHub Stats -->
             <div class="row mt-4">
@@ -392,8 +418,8 @@
                 <div class="card">
                   <div class="card-body text-center">
                     <h4 class="mb-4">GitHub Statistics</h4>
-                    <img src="https://github-readme-stats.vercel.app/api?username=luelhagos&show_icons=true&count_private=true&hide_border=true" alt="GitHub Stats" class="img-fluid mb-3">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luelhagos&layout=compact&hide_border=true" alt="Top Languages" class="img-fluid">
+                    <img src="https://github-readme-stats.vercel.app/api?username=luelhagos&show_icons=true&count_private=true&hide_border=true" alt="GitHub contribution statistics" loading="lazy" class="img-fluid mb-3">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luelhagos&layout=compact&hide_border=true" alt="Top programming languages by repo" loading="lazy" class="img-fluid">
                   </div>
                 </div>
               </div>

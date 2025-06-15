@@ -204,14 +204,14 @@
 
         <div class="gallery">
             <div class="gallery-item">
-                <img src="/assets/img/collections/mch.JPG" alt="Mch" onclick="expandImage(this)">
+                <img src="/assets/img/collections/mch.JPG" alt="Mch" loading="lazy" width="400" height="300" onclick="expandImage(this)">
                 <div class="image-caption">
                     <h3>Scenic Nature</h3>
                     <p class="placeholder-text">Details about this scene will be added soon...</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="/assets/img/collections/servalwildlife_Arusha.jpeg" alt="servalwildlife_Arusha" onclick="expandImage(this)">
+                <img src="/assets/img/collections/servalwildlife_Arusha.jpeg" alt="servalwildlife_Arusha" loading="lazy" width="400" height="300" onclick="expandImage(this)">
                 <div class="image-caption">
                     <h3>Wildlife in Arusha</h3>
                     <p class="placeholder-text">Details about this scene will be added soon...</p>
@@ -419,6 +419,19 @@
             document.querySelector('.overlay').style.display = 'none';
             document.getElementById('expandedCaption').style.display = 'none';
         }
+
+        // Performance: ensure all gallery images are lazy-loaded and have dimensions
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.gallery-item img').forEach(img => {
+                img.setAttribute('loading', 'lazy');
+                if (!img.getAttribute('width')) {
+                    img.setAttribute('width', '400');
+                }
+                if (!img.getAttribute('height')) {
+                    img.setAttribute('height', '300');
+                }
+            });
+        });
     </script>
 </body>
 
