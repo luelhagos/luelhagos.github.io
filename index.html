@@ -68,7 +68,7 @@
     <!-- Home Section -->
     <section id="luel" class="hero section light-background">
 
-      <img src="assets/img/l-bg.jpg" alt="Hero background image"/>
+      <img src="assets/img/l-bg.jpg" alt="Hero background image" loading="lazy"/>
 
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
@@ -121,164 +121,187 @@
               TO DO: Summery can be added here
             </div> -->
             <!-- Edn Resume Item -->
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Business Management (Certificate)</h4>
-              <h5>July 2022 - Aug. 2022</h5>
-              <p><em><a href="https://esmt.berlin/" target="_blank">European School of Management and Technology
-                    Berlin</a></em></p>
-              <ul>
-                <li>Business management course offered by the European School of Management and Technology Berlin in
-                  collaboration with the African Institute for Mathematical Sciences, Harvard Business Publishing, and
-                  the University of Victoria in Canada.</li>
-                <li>Relevant courses: Leadership, Teamwork, Entrepreneurship, Data Analytics, and Design Thinking</li>
-              </ul>
-            </div><!-- End Resume Item -->
+            <h3 class="resume-title">
+              <button class="btn btn-link p-0 w-100 text-start" data-bs-toggle="collapse" data-bs-target="#educationCollapse" aria-expanded="false">
+                Education <i class="bi bi-caret-down"></i>
+              </button>
+            </h3>
+            <div id="educationCollapse" class="collapse">
+              <div class="resume-item">
+                <h4>Business Management (Certificate)</h4>
+                <h5>July 2022 - Aug. 2022</h5>
+                <p><em><a href="https://esmt.berlin/" target="_blank">European School of Management and Technology
+                      Berlin</a></em></p>
+                <ul>
+                  <li>Business management course offered by the European School of Management and Technology Berlin in
+                    collaboration with the African Institute for Mathematical Sciences, Harvard Business Publishing, and
+                    the University of Victoria in Canada.</li>
+                  <li>Relevant courses: Leadership, Teamwork, Entrepreneurship, Data Analytics, and Design Thinking</li>
+                </ul>
+              </div><!-- End Resume Item -->
 
-            <div class="resume-item">
-              <h4>MSc in Mathematical Science</h4>
-              <h5> Aug. 2021 - Jun 2022</h5>
-              <p><em><a href="https://aims.ac.rw/" target="_blank">African Institute for Mathematical Sciences
-                    (AIMS)</a>,
-                  Kigali, Rwanda</em></p>
-              <li>Major: Data Science</li>
-              <li>Grade: Distinction</li>
-              <li>Relevant Courses: Data-driven Optimization with Machine Learning Applications, High Performance
-                Computing, Statistical Regression, Big Data Analytics with Python, Database and Data Management,
-                Introduction to Principles of Statistical Learning for Data Science, Operations Research.</li>
-            </div><!-- Edn Resume Item -->
+              <div class="resume-item">
+                <h4>MSc in Mathematical Science</h4>
+                <h5> Aug. 2021 - Jun 2022</h5>
+                <p><em><a href="https://aims.ac.rw/" target="_blank">African Institute for Mathematical Sciences
+                      (AIMS)</a>,
+                    Kigali, Rwanda</em></p>
+                <li>Major: Data Science</li>
+                <li>Grade: Distinction</li>
+                <li>Relevant Courses: Data-driven Optimization with Machine Learning Applications, High Performance
+                  Computing, Statistical Regression, Big Data Analytics with Python, Database and Data Management,
+                  Introduction to Principles of Statistical Learning for Data Science, Operations Research.</li>
+              </div><!-- Edn Resume Item -->
 
-            <div class="resume-item">
-              <h4>BSc in Computer Science and Engineering</h4>
-              <h5>Sep. 2015 - Dec. 2020</h5>
-              <p><em><a href="https://www.mit.edu.et/#" target="_blank">Mekelle Institute of Technology</a>, Mekelle,
-                  Ethiopia</em></p>
-              <li>Grade: Honors (3.77/4.0)</li>
-              <li>Relevant Courses: Data Structures, Design and Analysis of Algorithms, Operating Systems,
-                Microcontrollers, Compiler Design, Microprocessors, Cryptography and Network Security, Digital Signal
-                Processing.</li>
-            </div><!-- Edn Resume Item -->
+              <div class="resume-item">
+                <h4>BSc in Computer Science and Engineering</h4>
+                <h5>Sep. 2015 - Dec. 2020</h5>
+                <p><em><a href="https://www.mit.edu.et/#" target="_blank">Mekelle Institute of Technology</a>, Mekelle,
+                    Ethiopia</em></p>
+                <li>Grade: Honors (3.77/4.0)</li>
+                <li>Relevant Courses: Data Structures, Design and Analysis of Algorithms, Operating Systems,
+                  Microcontrollers, Compiler Design, Microprocessors, Cryptography and Network Security, Digital Signal
+                  Processing.</li>
+              </div><!-- Edn Resume Item -->
+            </div>
           </div>
 
           <!-- Add new section for Teaching -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Teaching Experience</h3>
+            <h3 class="resume-title">
+              <button class="btn btn-link p-0 w-100 text-start" data-bs-toggle="collapse" data-bs-target="#teachingCollapse" aria-expanded="false">
+                Teaching Experience <i class="bi bi-caret-down"></i>
+              </button>
+            </h3>
+            <div id="teachingCollapse" class="collapse">
+              <!-- Teaching Assistant at AIMS -->
+              <div class="resume-item">
+                <h5 class="mb-1">Teaching Assistant</h5>
+                <p class="mb-1"><strong><a href="https://aims.ac.rw/" target="_blank">African Institute for Mathematical
+                      Sciences (AIMS)</a></strong>, Kigali, Rwanda</p>
+                <p class="text-muted mb-2">Aug. 2022 – Oct. 2022</p>
+                <ul>
+                  <li>Assisted in teaching Introduction to Algorithms, LaTeX, and Python programming.</li>
+                </ul>
+              </div><!-- End Resume Item -->
 
-            <!-- Teaching Assistant at AIMS -->
-            <div class="resume-item">
-              <h5 class="mb-1">Teaching Assistant</h5>
-              <p class="mb-1"><strong><a href="https://aims.ac.rw/" target="_blank">African Institute for Mathematical
-                    Sciences (AIMS)</a></strong>, Kigali, Rwanda</p>
-              <p class="text-muted mb-2">Aug. 2022 – Oct. 2022</p>
-              <ul>
-                <li>Assisted in teaching Introduction to Algorithms, LaTeX, and Python programming.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+              <!-- Teaching Assistant at Iga Coding -->
+              <div class="resume-item">
+                <h5 class="mb-1">Teaching Assistant</h5>
+                <p class="mb-1"><strong><a
+                      href="https://sites.google.com/quantumleapafrica.org/iga-coding/events/python-camp-2022?authuser=0"
+                      target="_blank">Iga Coding</a></strong>, Kigali, Rwanda</p>
+                <p class="text-muted mb-2">Apr. 30 – May 2, 2022</p>
+                <ul>
+                  <li>Taught Python programming during a 3-day Python camp.</li>
+                </ul>
+              </div><!-- End Resume Item -->
 
-            <!-- Teaching Assistant at Iga Coding -->
-            <div class="resume-item">
-              <h5 class="mb-1">Teaching Assistant</h5>
-              <p class="mb-1"><strong><a
-                    href="https://sites.google.com/quantumleapafrica.org/iga-coding/events/python-camp-2022?authuser=0"
-                    target="_blank">Iga Coding</a></strong>, Kigali, Rwanda</p>
-              <p class="text-muted mb-2">Apr. 30 – May 2, 2022</p>
-              <ul>
-                <li>Taught Python programming during a 3-day Python camp.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+              <!-- Teaching Assistant at ECRI -->
+              <div class="resume-item">
+                <h5 class="mb-1">Teaching Assistant</h5>
+                <p class="mb-1"><strong><a
+                      href="https://aims.ac.rw/2023/12/01/were-transforming-africa-through-innovative-scientific-training-technical-advances-and-breakthrough-discoveries/"
+                      target="_blank">Evidence-Based Climate Reporting Initiative (ECRI)</a></strong>, Kigali, Rwanda</p>
+                <p class="text-muted mb-2">Feb. 2023 – Apr. 2023</p>
+                <ul>
+                  <li>Taught Advanced Excel for Data Analysis.</li>
+                </ul>
+              </div><!-- End Resume Item -->
 
-            <!-- Teaching Assistant at ECRI -->
-            <div class="resume-item">
-              <h5 class="mb-1">Teaching Assistant</h5>
-              <p class="mb-1"><strong><a
-                    href="https://aims.ac.rw/2023/12/01/were-transforming-africa-through-innovative-scientific-training-technical-advances-and-breakthrough-discoveries/"
-                    target="_blank">Evidence-Based Climate Reporting Initiative (ECRI)</a></strong>, Kigali, Rwanda</p>
-              <p class="text-muted mb-2">Feb. 2023 – Apr. 2023</p>
-              <ul>
-                <li>Taught Advanced Excel for Data Analysis.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+              <!-- Co-Founder and Teaching Assistant at TigraiCodes -->
+              <div class="resume-item">
+                <h5 class="mb-1">Co-Founder & Teaching Assistant</h5>
+                <p class="mb-1"><strong><a href="https://www.facebook.com/tigraicodes/"
+                      target="_blank">TigraiCodes</a></strong>, Mekelle, Ethiopia</p>
+                <p class="text-muted mb-2">Sep. 2019 – Present</p>
+                <ul>
+                  <li>Co-founded an initiative to teach programming and computer science concepts to high school students.
+                  </li>
+                </ul>
+              </div><!-- End Resume Item -->
 
-            <!-- Co-Founder and Teaching Assistant at TigraiCodes -->
-            <div class="resume-item">
-              <h5 class="mb-1">Co-Founder & Teaching Assistant</h5>
-              <p class="mb-1"><strong><a href="https://www.facebook.com/tigraicodes/"
-                    target="_blank">TigraiCodes</a></strong>, Mekelle, Ethiopia</p>
-              <p class="text-muted mb-2">Sep. 2019 – Present</p>
-              <ul>
-                <li>Co-founded an initiative to teach programming and computer science concepts to high school students.
-                </li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <!-- Teaching Assistant at AddisCoder -->
-            <div class="resume-item">
-              <h5 class="mb-1">Teaching Assistant</h5>
-              <p class="mb-1"><strong><a href="https://www.addiscoder.com/" target="_blank">AddisCoder</a></strong>,
-                Addis
-                Ababa, Ethiopia</p>
-              <p class="text-muted mb-2">Jul. 2019 – Aug. 2019</p>
-              <ul>
-                <li>Taught Python programming and algorithms.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
+              <!-- Teaching Assistant at AddisCoder -->
+              <div class="resume-item">
+                <h5 class="mb-1">Teaching Assistant</h5>
+                <p class="mb-1"><strong><a href="https://www.addiscoder.com/" target="_blank">AddisCoder</a></strong>,
+                  Addis
+                  Ababa, Ethiopia</p>
+                <p class="text-muted mb-2">Jul. 2019 – Aug. 2019</p>
+                <ul>
+                  <li>Taught Python programming and algorithms.</li>
+                </ul>
+              </div><!-- End Resume Item -->
+            </div>
           </div>
 
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Data Scientist at Ishango.ai</h4>
-              <h5>Oct. 2022 - </h5>
-              <p><em>Kigali, Rwanda</em></p>
-              <ul>
-                <li>Developing a chatbot for processing and understanding business documents using Large Language
-                  Models.</li>
-                <li>Extracting stakeholder information from authoritative sources for data-driven insights and designing
-                  knowledge graphs using Neo4j.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+            <h3 class="resume-title">
+              <button class="btn btn-link p-0 w-100 text-start" data-bs-toggle="collapse" data-bs-target="#professionalCollapse" aria-expanded="false">
+                Professional Experience <i class="bi bi-caret-down"></i>
+              </button>
+            </h3>
+            <div id="professionalCollapse" class="collapse">
+              <div class="resume-item">
+                <h4>Data Scientist at Ishango.ai</h4>
+                <h5>Oct. 2022 - May 2025</h5>
+                <p><em>Remote</em></p>
+                <ul>
+                  <li>Developing a chatbot for processing and understanding business documents using Large Language
+                    Models.</li>
+                  <li>Helped developing a data pipeline to scrape historical media data and performed bias analysis for the
+                    <a href="https://resources.africapractice.com/the-cost-of-stereotypes-to-africa" target="_blank">"Cost of Media Stereotypes in Africa"</a> report.</li>
+                  <li>Extracting stakeholder information from authoritative sources for data-driven insights and designing
+                    knowledge graphs using Neo4j.</li>
+                </ul>
+              </div><!-- End Resume Item -->
 
-            <div class="resume-item">
-              <h4>Internship at iCog Labs Software Consultancy</h4>
-              <h5>Sep. 2019 – Jan. 2020</h5>
-              <p><em>Addis Ababa, Ethiopia</em></p>
-              <ul>
-                <li>Developed a rule-based algorithm to extract word stems for the Tigrinya language, aimed at enhancing
-                  natural language processing tasks.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
+              <div class="resume-item">
+                <h4>Internship at <a href="https://icog-labs.com/" target="_blank">iCog Labs Software Consultancy</a></h4>
+                <h5>Sep. 2019 – Jan. 2020</h5>
+                <p><em>Addis Ababa, Ethiopia</em></p>
+                <ul>
+                  <li>Developed a rule-based algorithm to extract word stems for the Tigrinya language, aimed at enhancing
+                    natural language processing tasks.</li>
+                </ul>
+              </div><!-- End Resume Item -->
+            </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Honours and Awards</h3>
-            <div class="resume-item">
-              <h4><a href="https://www.statistics.gov.rw/about-us/hackathon-competition-2023-edition"
-                  target="_blank">The National Institute of
-                  Statistics of Rwanda (NISR) - Hackathon</a></h4>
-              <h5>1st Place Winner</h5>
-              <p><em>Dec. 2023</em></p>
-              <p><em>Kigali, Rwanda</em></p>
-              <ul>
-                <li>Developed an interactive dashboard for the 2022 Gross Domestic Product (GDP) and Consumer Price
-                  Index
-                  (CPI).</li>
-              </ul>
-            </div><!-- End Resume Item -->
+            <h3 class="resume-title">
+              <button class="btn btn-link p-0 w-100 text-start" data-bs-toggle="collapse" data-bs-target="#honoursCollapse" aria-expanded="false">
+                Honours and Awards <i class="bi bi-caret-down"></i>
+              </button>
+            </h3>
+            <div id="honoursCollapse" class="collapse">
+              <div class="resume-item">
+                <h4><a href="https://www.statistics.gov.rw/about-us/hackathon-competition-2023-edition"
+                    target="_blank">The National Institute of
+                    Statistics of Rwanda (NISR) - Hackathon</a></h4>
+                <h5>1st Place Winner</h5>
+                <p><em>Dec. 2023</em></p>
+                <p><em>Kigali, Rwanda</em></p>
+                <ul>
+                  <li>Developed an interactive dashboard for the 2022 Gross Domestic Product (GDP) and Consumer Price
+                    Index
+                    (CPI).</li>
+                </ul>
+              </div><!-- End Resume Item -->
 
-            <div class="resume-item">
-              <h4><a href="https://github.com/luelhagos/Virtual-healthcare" target="_blank">Microsoft African
-                  Development
-                  Center</a></h4>
-              <h5>Third-place winner</h5>
-              <p><em>Feb. 2022</em></p>
-              <p><em>Remote</em></p>
-              <ul>
-                <li>Developed a virtual healthcare app to improve access to healthcare in Africa.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+              <div class="resume-item">
+                <h4><a href="https://github.com/luelhagos/Virtual-healthcare" target="_blank">Microsoft African
+                    Development
+                    Center</a></h4>
+                <h5>Third-place winner</h5>
+                <p><em>Feb. 2022</em></p>
+                <p><em>Remote</em></p>
+                <ul>
+                  <li>Developed a virtual healthcare app to improve access to healthcare in Africa.</li>
+                </ul>
+              </div><!-- End Resume Item -->
+            </div>
           </div>
 
         </div>
@@ -293,19 +316,19 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>My Work</h2>
-        <p>Projects and some technical posts.</p>
+        <p>Projects and technical posts.</p>
       </div><!-- End Section Title -->
       
       <!-- Work Tabs -->
       <div class="container">
         <div class="row">
           <div class="col-lg-12 mb-4">
-            <ul class="nav nav-tabs d-flex justify-content-center" id="workTab" role="tablist">
+            <ul class="nav nav-tabs d-flex justify-content-center nav-fill" id="workTab" role="tablist">
               <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-content" type="button" role="tab" aria-controls="projects-content" aria-selected="true">Projects</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts-content" type="button" role="tab" aria-controls="posts-content" aria-selected="false">Technical Posts</button>
+                <button class="nav-link" id="posts-tab" data-bs-toggle="tab" data-bs-target="#posts-content" type="button" role="tab" aria-controls="posts-content" aria-selected="false">Posts</button>
               </li>
             </ul>
           </div>
@@ -435,6 +458,18 @@
         <p>I have a passion for capturing moments through my lens, especially those that showcase the beauty of
           nature. Take a look...</p>
         <p><a href="Photos/photography_collection.html" class="btn-view">View My Photography</a></p>
+        <!-- Preview Grid -->
+        <div class="row g-2 mt-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-4">
+            <a href="Photos/photography_collection.html"><img src="assets/img/collections/kg_sunset_22_06_25.jpg" class="preview-img rounded shadow-sm" alt="Sunset"></a>
+          </div>
+          <div class="col-4">
+            <a href="Photos/photography_collection.html"><img src="assets/img/collections/meteora_thessaloniki.jpg" class="preview-img rounded shadow-sm" alt="Mountains"></a>
+          </div>
+          <div class="col-4">
+            <a href="Photos/photography_collection.html"><img src="/assets/img/collections/Add-kl1.jpeg"" class="preview-img rounded shadow-sm" alt="Mountain view from above"></a>
+          </div>
+        </div>
       </div>
     </section><!-- /Visual Diary Section -->
 
@@ -468,45 +503,6 @@
             </div><!-- End Info Item -->
           </div>
         </div>
-      </div>
-
-      </div>
-
-      <!-- <div class="col-lg-8">
-            <form action="https://luelhagos.github.io/forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div> -->
-
-      </div>
-
       </div>
 
     </section><!-- /Contact Section -->

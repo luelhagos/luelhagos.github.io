@@ -256,8 +256,8 @@
       const targetElement = document.querySelector(targetId);
       if (!targetElement) return;
       
-      const headerHeight = document.querySelector('#header').offsetHeight;
-      const targetPosition = targetElement.offsetTop - headerHeight;
+      const scrollMarginTop = parseInt(getComputedStyle(targetElement).scrollMarginTop) || 0;
+      const targetPosition = targetElement.offsetTop - scrollMarginTop;
       
       window.scrollTo({
         top: targetPosition,
