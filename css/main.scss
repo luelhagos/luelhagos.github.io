@@ -44,3 +44,10 @@ $header-fg: #FFF;
 section {
     scroll-margin-top: 80px;
 }
+
+// Preview thumbnails for Visual Diary
+.preview-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
