@@ -15,11 +15,21 @@
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
+    const header = document.querySelector('#header');
+    header.classList.toggle('header-show');
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
+    const expanded = header.classList.contains('header-show');
+    headerToggleBtn.setAttribute('aria-expanded', String(expanded));
+    headerToggleBtn.setAttribute('aria-label', expanded ? 'Close navigation' : 'Open navigation');
   }
   headerToggleBtn.addEventListener('click', headerToggle);
+  headerToggleBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      headerToggle();
+    }
+  });
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -31,6 +41,22 @@
       }
     });
 
+  });
+
+  /**
+   * Rotate chevrons in resume collapses
+   */
+  document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const icon = this.querySelector('.chevron');
+      if (!icon) return;
+      // Use a small timeout to wait for collapse state to settle
+      setTimeout(() => {
+        const target = document.querySelector(this.getAttribute('data-bs-target'));
+        const isShown = target && target.classList.contains('show');
+        icon.classList.toggle('rotate-180', isShown);
+      }, 200);
+    });
   });
 
   /**
@@ -232,11 +258,15 @@
     });
     
     // Remove active class from all links
-    document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+    document.querySelectorAll('.navmenu a.active').forEach(link => {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    });
     
     // Add active class to current section link
     if (currentSection) {
       currentSection.classList.add('active');
+      currentSection.setAttribute('aria-current', 'true');
     }
   }
   

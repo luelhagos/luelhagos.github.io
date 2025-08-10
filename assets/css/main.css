@@ -769,6 +769,16 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+/* Resume chevron rotation */
+.chevron { transition: transform 0.2s ease; }
+.rotate-180 { transform: rotate(180deg); }
+
+/* Tighten spacing between location and date lines in resume */
+.resume .resume-item .text-muted span + span { margin-left: 12px; }
+
+/* Optional: reduce top margin for lists inside resume items */
+.resume .resume-item ul { margin-top: 0.5rem; }
+
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
@@ -1482,4 +1492,30 @@ section,
   width: 100%;
   height: 180px;
   object-fit: cover;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 10000;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  outline: 2px solid #fff;
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
+}
+.btn:focus-visible, a.btn:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
 }
