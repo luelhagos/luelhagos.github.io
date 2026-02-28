@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://luelhagos.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://luelhagos.github.io/Photos/photography_collection.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luelhagos.github.io/posts/Implicit_Euler_method</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://luelhagos.github.io/posts/MathsPy</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://luelhagos.github.io/posts/Trapezoidal_methods</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://luelhagos.github.io/posts/Runge_Kutta_methods</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>

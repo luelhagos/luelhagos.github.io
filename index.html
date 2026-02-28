@@ -8,7 +8,7 @@
   <meta name="description" content="Portfolio and blog of Luel Hagos Beyene, Data Scientist specializing in NLP, deep learning and data science.">
   <meta property="og:title" content="Luel Hagos Beyene – Data Scientist">
   <meta property="og:description" content="Portfolio and blog of Luel Hagos Beyene showcasing projects in NLP, deep learning, and data science.">
-  <meta property="og:image" content="assets/img/l-bg.jpg">
+  <meta property="og:image" content="https://luelhagos.github.io/assets/img/l-bg.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://luelhagos.github.io/">
   <meta name="twitter:card" content="summary_large_image">
@@ -46,9 +46,6 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  
-
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -74,7 +71,7 @@
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
         <li><a href="#work"><i class="bi bi-code-square navicon"></i><span>Work</span></a></li>
-        <li><a href="#github"><i class="bi bi-github navicon"></i><span>GitHub</span></a></li>
+        <li><a href="#work" data-activate-tab="posts-tab"><i class="bi bi-pencil-square navicon"></i><span>Blog</span></a></li>
         <li><a href="#visual-diary"><i class="bi bi-images navicon"></i><span>Visual Diary</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
@@ -175,7 +172,6 @@
               </div><!-- Edn Resume Item -->
             </div>
 
-            <!-- Skills Section - Commented out for now
             <h3 class="resume-title">
               <button class="btn btn-link p-0 w-100 text-start" data-bs-toggle="collapse" data-bs-target="#skillsCollapse" aria-expanded="false">
                 Skills <i class="bi bi-chevron-down chevron" aria-hidden="true"></i>
@@ -196,10 +192,9 @@
               </div>
               <div class="resume-item">
                 <h4>Natural Language Processing</h4>
-                <p>LLMs, Text Generation, Question Answering, Low-Resource Languages</p>
+                <p>LLMs, Text Generation, Question Answering, Low-Resource Languages, TTS, ASR</p>
               </div>
             </div>
-            -->
           </div>
 
           <!-- Add new section for Teaching -->
@@ -266,10 +261,10 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">
               <button class="btn btn-link p-0 w-100 text-start" data-bs-toggle="collapse" data-bs-target="#professionalCollapse" aria-expanded="false">
-                Professional Experience <i class="bi bi-chevron-down chevron" aria-hidden="true"></i>
+                Professional Experience <i class="bi bi-chevron-down chevron rotate-180" aria-hidden="true"></i>
               </button>
             </h3>
-            <div id="professionalCollapse" class="collapse">
+            <div id="professionalCollapse" class="collapse show">
               <div class="resume-item">
                 <div class="d-flex justify-content-between align-items-start flex-wrap">
                   <h4 class="mb-1">
@@ -393,7 +388,8 @@
                 <div class="card h-100">
                   <div class="card-body">
                     <h4 class="card-title mb-3">Tigrinya GPT-2 Model</h4>
-                    <p class="card-text">51M-parameter GPT-2 model trained on 21M Tigrinya tokens.</p>
+                    <p class="card-text">51M-parameter GPT-2 model trained from scratch on 21M Tigrinya tokens. Built to advance text generation for a low-resource African language with limited NLP tooling.</p>
+                    <div class="mb-2"><span class="badge bg-light text-dark border">PyTorch</span> <span class="badge bg-light text-dark border">HuggingFace</span> <span class="badge bg-light text-dark border">Low-Resource NLP</span></div>
                     <div class="mt-4">
                       <a href="https://huggingface.co/spaces/luel/tigrinya-gpt2-text-generator" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Try the Demo</a>
                       <a href="https://huggingface.co/luel/gpt2-tigrinya-medium" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Explore the Model</a>
@@ -407,7 +403,8 @@
                 <div class="card h-100">
                   <div class="card-body">
                     <h4 class="card-title mb-3">Gemma-3-4B-Tigrinya</h4>
-                    <p class="card-text">4B-parameter Gemma model fine-tuned for Tigrinya text generation.</p>
+                    <p class="card-text">Google's Gemma 3 (4B) fine-tuned via SFT on curated Tigrinya data for fluent text generation in a language with minimal LLM support.</p>
+                    <div class="mb-2"><span class="badge bg-light text-dark border">SFT</span> <span class="badge bg-light text-dark border">Gemma</span> <span class="badge bg-light text-dark border">HuggingFace</span></div>
                     <div class="mt-4">
                       <a href="https://huggingface.co/luel/gemma-3-4b-tigrinya" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Explore the Model</a>
                     </div>
@@ -420,7 +417,8 @@
                 <div class="card h-100">
                   <div class="card-body">
                     <h4 class="card-title mb-3">Gemma-3-4B-Tigrinya QA</h4>
-                    <p class="card-text">4B-parameter Gemma model instruction-tuned for Tigrinya question answering.</p>
+                    <p class="card-text">Instruction-tuned variant of Gemma 3 (4B) optimized for Tigrinya question answering, enabling conversational AI capabilities for low-resource language speakers.</p>
+                    <div class="mb-2"><span class="badge bg-light text-dark border">Instruction Tuning</span> <span class="badge bg-light text-dark border">QA</span> <span class="badge bg-light text-dark border">Gemma</span></div>
                     <div class="mt-4">
                       <a href="https://huggingface.co/luel/gemma-3-4b-tigrinya-qa" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Explore the Model</a>
                     </div>
@@ -436,7 +434,8 @@
                       <h4 class="card-title mb-0">NISR Statistical Dashboard</h4>
                       <span class="badge bg-success"><i class="bi bi-trophy me-1"></i>1st Place</span>
                     </div>
-                    <p class="card-text">Interactive Python dashboard for exploring Rwanda's statistical datasets, making complex economic indicators accessible through visual storytelling.</p>
+                    <p class="card-text">Interactive Python dashboard for exploring Rwanda's statistical datasets (GDP, CPI, trade). Simplified complex economic indicators into intuitive visual narratives for public accessibility.</p>
+                    <div class="mb-2"><span class="badge bg-light text-dark border">Python</span> <span class="badge bg-light text-dark border">Data Viz</span> <span class="badge bg-light text-dark border">Dashboard</span></div>
                     <div class="mt-4">
                       <a href="https://github.com/Aksumite-Toumai/NISR-Hackathon" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                     </div>
@@ -531,32 +530,6 @@
         </div>
       </div>
     </section><!-- /Work Section -->
-
-    <!-- GitHub Activity Section -->
-    <section id="github" class="github section light-background">
-      
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>GitHub Activity</h2>
-        <p>My open source contributions and code repositories</p>
-      </div><!-- End Section Title -->
-      
-      <div class="container">
-        <div class="row">
-            <div class="row mt-4">
-              <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                  <div class="card-body text-center">
-                    <h4 class="mb-4">GitHub Statistics</h4>
-                    <img src="https://github-readme-stats.vercel.app/api?username=luelhagos&show_icons=true&count_private=true&hide_border=true" alt="GitHub contribution statistics" loading="lazy" class="img-fluid mb-3">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=luelhagos&layout=compact&hide_border=true" alt="Top programming languages by repo" loading="lazy" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-    </section><!-- /GitHub Activity Section -->
 
     <!-- Visual Diary Section -->
     <section id="visual-diary" class="visual-diary section">
@@ -688,11 +661,6 @@
   <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script defer src="assets/vendor/aos/aos.js"></script>
   <script defer src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script defer src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script defer src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script defer src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script defer src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script defer src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <!-- Main JS File -->
   <script defer src="assets/js/main.js"></script>
