@@ -39,8 +39,20 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&family=Raleway:wght@400;600;700&display=swap"
     rel="stylesheet">
+
+  <!-- Apply saved theme before first paint to avoid a flash -->
+  <script>
+    (function() {
+      let theme;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (!theme) {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    })();
+  </script>
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +102,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h1>Luel Hagos Beyene</h1>
-            <p>I'm <span class="typed" data-typed-items="Data Scientist, NLP Enthusiast">Data Scientist</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <p>I'm <span class="typed" data-typed-items="a Data Scientist, an NLP Enthusiast, chasing sunsets with a camera">a Data Scientist</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
               <a href="https://www.linkedin.com/in/luel-hagos/" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
               <a href="https://github.com/luelhagos" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
@@ -113,7 +125,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-        <p>I have over three years of experience as a data scientist and hold a Master's degree in Mathematical Science
+        <p>I have 3+ years of experience as a data scientist and hold a Master's degree in Mathematical Science
           with a focus on Data Science, as well as a Bachelor's degree in Computer Science and Engineering. I'm
           passionate about deep learning, data science, and natural language processing, with particular focus on
           low-resource NLP, Supervised Fine-Tuning (SFT), Text-to-Speech, and Automatic Speech Recognition (ASR).
@@ -162,7 +174,8 @@
               </div><!-- End Resume Item -->
 
               <div class="resume-item">
-                <h4 class="mb-1"><a href="https://www.mit.edu.et/#" target="_blank" rel="noopener noreferrer">Mekelle Institute of Technology</a></h4>
+                <h4 class="mb-1"><a href="https://www.mu.edu.et/" target="_blank" rel="noopener noreferrer"> Mekelle University - 
+              Mekelle Institute of Technology</a></h4>
                 <h5 class="mb-1 text-uppercase fw-bold">BSc in Computer Science and Engineering</h5>
                 <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Mekelle, Ethiopia</span><span><i class="bi bi-calendar me-1"></i>2020</span></div>
                 <ul class="mt-2">
@@ -272,6 +285,21 @@
               <div class="resume-item">
                 <div class="d-flex justify-content-between align-items-start flex-wrap">
                   <h4 class="mb-1">
+                    <a href="https://mila.quebec/en" target="_blank" rel="noopener noreferrer">Mila – Quebec AI Institute</a>
+                    <i class="bi bi-box-arrow-up-right ms-1"></i>
+                  </h4>
+                  <div class="text-muted"><i class="bi bi-geo-alt me-1"></i>Montreal, Canada</div>
+                </div>
+                <h5 class="text-uppercase fw-bold mt-1">Research Intern</h5>
+                <span class="badge bg-light text-dark border mt-1"><i class="bi bi-calendar me-1"></i>May 2026 – Aug. 2026</span>
+                <ul class="mt-3">
+                  <li>Worked on face-conditioned emotional text-to-speech (TTS) models, conditioning speech synthesis on facial expressions to generate emotionally expressive voices.</li>
+                </ul>
+              </div><!-- End Resume Item -->
+
+              <div class="resume-item">
+                <div class="d-flex justify-content-between align-items-start flex-wrap">
+                  <h4 class="mb-1">
                     <a href="https://ishango.ai/" target="_blank" rel="noopener noreferrer">Ishango.ai</a>
                     <i class="bi bi-box-arrow-up-right ms-1"></i>
                   </h4>
@@ -314,10 +342,7 @@
             <div id="honoursCollapse" class="collapse">
               <div class="resume-item">
                 <div class="d-flex justify-content-between align-items-center flex-wrap mb-1">
-                  <h4 class="mb-0">
-                    <a href="https://www.statistics.gov.rw/" target="_blank" rel="noopener noreferrer">The National Institute of Statistics of Rwanda (NISR) – Hackathon</a>
-                    <i class="bi bi-box-arrow-up-right ms-1"></i>
-                  </h4>
+                  <h4 class="mb-0">The National Institute of Statistics of Rwanda (NISR) – Hackathon</h4>
                   <a class="text-dark" href="https://github.com/Aksumite-Toumai/NISR-Hackathon" target="_blank" rel="noopener noreferrer" aria-label="View code on GitHub"><i class="bi bi-github fs-5"></i></a>
                 </div>
                 <div class="mb-2">
@@ -389,7 +414,10 @@
               <div class="col-lg-6 mb-4" data-aos="fade-up">
                 <div class="card h-100">
                   <div class="card-body">
-                    <h4 class="card-title mb-3">Tigrinya GPT-2 Model</h4>
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                      <h4 class="card-title mb-0">Tigrinya GPT-2 Model</h4>
+                      <span class="badge bg-light text-dark border hf-downloads" data-hf-model="luel/gpt2-tigrinya-medium" hidden><i class="bi bi-download me-1"></i><span class="hf-count"></span></span>
+                    </div>
                     <p class="card-text">51M-parameter GPT-2 model trained from scratch on 21M Tigrinya tokens. Built to advance text generation for a low-resource African language with limited NLP tooling.</p>
                     <div class="mb-2"><span class="badge bg-light text-dark border">PyTorch</span> <span class="badge bg-light text-dark border">HuggingFace</span> <span class="badge bg-light text-dark border">Low-Resource NLP</span></div>
                     <div class="mt-4">
@@ -404,7 +432,10 @@
               <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="card h-100">
                   <div class="card-body">
-                    <h4 class="card-title mb-3">Gemma-3-4B-Tigrinya</h4>
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                      <h4 class="card-title mb-0">Gemma-3-4B-Tigrinya</h4>
+                      <span class="badge bg-light text-dark border hf-downloads" data-hf-model="luel/gemma-3-4b-tigrinya" hidden><i class="bi bi-download me-1"></i><span class="hf-count"></span></span>
+                    </div>
                     <p class="card-text">Google's Gemma 3 (4B) fine-tuned via SFT on curated Tigrinya data for fluent text generation in a language with minimal LLM support.</p>
                     <div class="mb-2"><span class="badge bg-light text-dark border">SFT</span> <span class="badge bg-light text-dark border">Gemma</span> <span class="badge bg-light text-dark border">HuggingFace</span></div>
                     <div class="mt-4">
@@ -418,7 +449,10 @@
               <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card h-100">
                   <div class="card-body">
-                    <h4 class="card-title mb-3">Gemma-3-4B-Tigrinya QA</h4>
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                      <h4 class="card-title mb-0">Gemma-3-4B-Tigrinya QA</h4>
+                      <span class="badge bg-light text-dark border hf-downloads" data-hf-model="luel/gemma-3-4b-tigrinya-qa" hidden><i class="bi bi-download me-1"></i><span class="hf-count"></span></span>
+                    </div>
                     <p class="card-text">Instruction-tuned variant of Gemma 3 (4B) optimized for Tigrinya question answering, enabling conversational AI capabilities for low-resource language speakers.</p>
                     <div class="mb-2"><span class="badge bg-light text-dark border">Instruction Tuning</span> <span class="badge bg-light text-dark border">QA</span> <span class="badge bg-light text-dark border">Gemma</span></div>
                     <div class="mt-4">
@@ -590,54 +624,14 @@
 
       <div class="container unique-container" data-aos="fade" data-aos-delay="100">
         <div class="row justify-content-center">
-          <div class="col-lg-3">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>KN 3 Rd, Kigali, Rwanda</p>
-              </div>
-            </div><!-- End Info Item -->
-          </div>
-          <div class="col-lg-3">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4">
+            <div class="info-item d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email</h3>
-                <p>luelbhagos@gmail.com</p>
+                <p><a href="mailto:luelbhagos@gmail.com">luelbhagos@gmail.com</a></p>
               </div>
             </div><!-- End Info Item -->
-          </div>
-        </div>
-        <div class="row mt-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-8 mx-auto">
-            <form action="https://formsubmit.co/luelbhagos@gmail.com" method="post" role="form" class="php-email-form">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="New portfolio contact">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_next" value="https://luelhagos.github.io/#contact?sent=1">
-              <input type="text" name="_honey" style="display:none">
-              <div class="row gy-3">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="col-12">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                </div>
-                <div class="col-12">
-                  <textarea name="message" rows="5" class="form-control" placeholder="Message" required></textarea>
-                </div>
-                <div class="col-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                  <button type="submit">Send Message</button>
-                </div>
-              </div>
-            </form>
           </div>
         </div>
       </div>
@@ -652,10 +646,6 @@
         <span>Copyright</span> <strong class="px-1 sitename">Luel Hagos Beyene</strong> <span>All Rights Reserved</span>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
@@ -665,8 +655,11 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+    <i class="bi bi-moon-stars theme-icon-dark"></i>
+    <i class="bi bi-sun theme-icon-light"></i>
+  </button>
 
   <!-- Vendor JS Files -->
   <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

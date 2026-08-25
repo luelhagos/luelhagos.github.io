@@ -72,14 +72,32 @@
   });
 
   /**
-   * Preloader
+   * Dark mode toggle (theme is applied pre-paint by an inline script in <head>)
    */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
+  const themeToggle = document.querySelector('#theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-bs-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
     });
   }
+
+  /**
+   * HuggingFace model download counts
+   */
+  document.querySelectorAll('.hf-downloads[data-hf-model]').forEach(badge => {
+    const model = badge.getAttribute('data-hf-model');
+    fetch(`https://huggingface.co/api/models/${model}?expand[]=downloadsAllTime`)
+      .then(res => res.ok ? res.json() : Promise.reject())
+      .then(data => {
+        if (typeof data.downloadsAllTime === 'number') {
+          badge.querySelector('.hf-count').textContent = `${data.downloadsAllTime.toLocaleString()} downloads`;
+          badge.hidden = false;
+        }
+      })
+      .catch(() => {});
+  });
 
   /**
    * Scroll top button
@@ -121,7 +139,7 @@
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
+    typed_strings = typed_strings.split(',').map(s => s.trim());
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,

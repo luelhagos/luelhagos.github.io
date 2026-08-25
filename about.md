@@ -9,7 +9,7 @@ I'm a data scientist particularly interested in deep learning and natural langua
 <br>
 
 ## Education 
-* [__Business Management - ESMT Berlin__](https://esmt.berlin/) (07/2022 – 08/2022, Kigali, Rwanda)
+* [__Business Management - ESMT Berlin__](https://esmt.berlin/) (07/2022 – 08/2022, Remote)
     * A five-week Business management training program organized by Industry Immersion Africa (IIP) in partnership with [ESMT Berlin](https://esmt.berlin/).
     * I had the chance to enhance my knowledge and skills in leadership, teamwork, entrepreneurship, data analytics, and design thinking, to mention a few.
     

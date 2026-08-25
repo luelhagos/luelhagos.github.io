@@ -351,38 +351,45 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader
+# Theme Toggle
 --------------------------------------------------------------*/
-#preloader {
+#theme-toggle {
   position: fixed;
-  inset: 0;
-  z-index: 999999;
-  overflow: hidden;
-  background: var(--background-color);
-  transition: all 0.6s ease-out;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  background-color: var(--surface-color);
+  color: var(--heading-color);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
+#theme-toggle:hover {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+}
 
-  100% {
-    transform: rotate(360deg);
+@media (max-width: 1199px) {
+  /* Make room for the mobile nav toggle, which also sits at top right */
+  #theme-toggle {
+    right: 70px;
   }
+}
+
+#theme-toggle .theme-icon-light,
+[data-bs-theme="dark"] #theme-toggle .theme-icon-dark {
+  display: none;
+}
+
+[data-bs-theme="dark"] #theme-toggle .theme-icon-light {
+  display: inline;
 }
 
 /*--------------------------------------------------------------
@@ -815,4 +822,47 @@ section,
 .btn:focus-visible, a.btn:focus-visible {
   outline: 3px solid #0d6efd;
   outline-offset: 2px;
+}
+/*--------------------------------------------------------------
+# Dark Mode
+--------------------------------------------------------------*/
+html[data-bs-theme="dark"] {
+  --background-color: #0e1319;
+  --default-color: #d8dee6;
+  --heading-color: #f1f4f8;
+  --accent-color: #3d9bff;
+  --surface-color: #171e27;
+  --contrast-color: #ffffff;
+  --nav-color: #aeb8c4;
+  --nav-hover-color: #3d9bff;
+  --nav-mobile-background-color: #12181f;
+  --nav-dropdown-background-color: #12181f;
+  --nav-dropdown-color: #d8dee6;
+  --nav-dropdown-hover-color: #3d9bff;
+}
+
+[data-bs-theme="dark"] .light-background {
+  --background-color: #121822;
+  --surface-color: #1a222d;
+}
+
+[data-bs-theme="dark"] .badge.bg-light {
+  background-color: var(--surface-color) !important;
+  color: var(--default-color) !important;
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%) !important;
+}
+
+[data-bs-theme="dark"] .badge.bg-light.text-dark,
+[data-bs-theme="dark"] .text-dark {
+  color: var(--default-color) !important;
+}
+
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .list-group-item {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+}
+
+[data-bs-theme="dark"] #theme-toggle {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }

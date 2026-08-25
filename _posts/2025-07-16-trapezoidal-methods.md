@@ -60,7 +60,7 @@ def model(x, t):
 ### 2.1 Implicit trapezoidal
 
 ```python
-def explict_trapz(F, c0,  t):
+def implicit_trapz(F, c0,  t):
     X = np.zeros((len(t), len(c0)))
     X[0] = c0
     for n in range(len(t) - 1):
@@ -68,7 +68,7 @@ def explict_trapz(F, c0,  t):
         X[n+1] = fsolve(f1, X[n])
     return X
 
-imp_trap = explict_trapz(model, x0, t)
+imp_trap = implicit_trapz(model, x0, t)
 ip1_t = imp_trap[:, 0]
 ip2_t = imp_trap[:, 1]
 ip3_t = imp_trap[:, 2]
@@ -79,16 +79,16 @@ ip3_t = imp_trap[:, 2]
 print()
 print()
 print("\t      =======================================================================================")
-print(f"\t   ** Plot of Exact solution, Approximate solution, and the error Using Implict Trapizoidal **")
+print(f"\t   ** Plot of Exact solution, Approximate solution, and the error Using Implicit Trapezoidal **")
 print("\t      =======================================================================================\n")
 
-plot(t, x1t(t), ip1_t, 'Modified trapzoidal', "Exact VS Implict Trapizoidal for x1", abs(x1t(t) - ip1_t)) 
-plot(t, x2t(t), ip2_t, 'Modified trapzoidal', "Exact VS Implict Trapizoidal for x2", abs(x2t(t) - ip2_t)) 
-plot(t, x3t(t), ip3_t, 'Modified trapzoidal', "Exact VS Implict Trapizoidal for x3", abs(x3t(t) - ip3_t)) 
+plot(t, x1t(t), ip1_t, 'Implicit trapezoidal', "Exact VS Implicit Trapezoidal for x1", abs(x1t(t) - ip1_t)) 
+plot(t, x2t(t), ip2_t, 'Implicit trapezoidal', "Exact VS Implicit Trapezoidal for x2", abs(x2t(t) - ip2_t)) 
+plot(t, x3t(t), ip3_t, 'Implicit trapezoidal', "Exact VS Implicit Trapezoidal for x3", abs(x3t(t) - ip3_t)) 
 ```
 Running the code produces the following absolute-error plots against the analytic solution:
 
-![Error implicit trap](/Figures/numeric_ode/Modified_Trapizoidal_result.png)
+![Error implicit trap](/Figures/numeric_ode/Implict_Trapizoidal_result.png)
 
 
 ### 2.2 Modified trapezoidal
@@ -113,12 +113,12 @@ md3_tr = md_tr[:,2]
 print()
 print()
 print("\t      =======================================================================================")
-print(f"\t   ** Plot of Exact solution, Approximate solution, and the error Using Modified Trapizoidal **")
+print(f"\t   ** Plot of Exact solution, Approximate solution, and the error Using Modified Trapezoidal **")
 print("\t      =======================================================================================\n")
 
-plot(t, x1t(t), md1_tr, 'Modified trapzoidal', "Exact VS Modified Trapizoidal for x1", abs(x1t(t) - md1_tr)) 
-plot(t, x2t(t), md2_tr, 'Modified trapzoidal', "Exact VS Modified Trapizoidal for x2", abs(x2t(t) - md2_tr)) 
-plot(t, x3t(t), md3_tr, 'Modified trapzoidal', "Exact VS Modified Trapizoidal for x3", abs(x3t(t) - md3_tr)) 
+plot(t, x1t(t), md1_tr, 'Modified trapezoidal', "Exact VS Modified Trapezoidal for x1", abs(x1t(t) - md1_tr)) 
+plot(t, x2t(t), md2_tr, 'Modified trapezoidal', "Exact VS Modified Trapezoidal for x2", abs(x2t(t) - md2_tr)) 
+plot(t, x3t(t), md3_tr, 'Modified trapezoidal', "Exact VS Modified Trapezoidal for x3", abs(x3t(t) - md3_tr)) 
 ```
 
 Running the code produces the following absolute-error plots against the analytic solution:

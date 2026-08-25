@@ -12,7 +12,7 @@ It is similar to the (standard) Euler method, but differs in that it is an impli
 
 ## Implementation and Plots
 
-Now let us see the implementation of explict euler formula using python.
+Now let us see the implementation of the implicit Euler formula using Python.
 ```python
 """
 It takes partition boundaries-"a,b", the differential equation-"F", initial values-'c', and the step size-'h'
@@ -119,8 +119,8 @@ print("\t      =================================================================
 print(f"\t   **  Plot of Exact solution, Approximate solution, and the error Using Implicit Euler **")
 print("\t      ==================================================================================\n")
 
-plot(t, x1t(t), eu1_im, 'Euler explict', "Exact VS Implicit Euler for x1", abs(x1t(t) - eu1_im)) # plot for x1
-plot(t, x2t(t), eu2_im, 'Euler explict', "Exact VS Implicit Euler for x2", abs(x2t(t) - eu2_im)) # plot for x2
-plot(t, x3t(t), eu3_im, 'Euler explict', "Exact VS Implicit Euler for x3", abs(x3t(t) - eu3_im)) # plot for x3
+plot(t, x1t(t), eu1_im, 'Implicit Euler', "Exact VS Implicit Euler for x1", abs(x1t(t) - eu1_im)) # plot for x1
+plot(t, x2t(t), eu2_im, 'Implicit Euler', "Exact VS Implicit Euler for x2", abs(x2t(t) - eu2_im)) # plot for x2
+plot(t, x3t(t), eu3_im, 'Implicit Euler', "Exact VS Implicit Euler for x3", abs(x3t(t) - eu3_im)) # plot for x3
 ```
 ![Implicit Euler](https://github.com/luelhagos/luelhagos.github.io/blob/gh-pages/Figures/numeric_ode/implicit_euler_m.png?raw=true)

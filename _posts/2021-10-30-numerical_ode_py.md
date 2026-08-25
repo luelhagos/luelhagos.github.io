@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Explict Euler method for Ordinary Differential Equations(ODEs) using Python"
+title:  "Explicit Euler method for Ordinary Differential Equations(ODEs) using Python"
 date:   2021-10-30 03:31
 categories: Numerical method for ODEs Python
 permalink: /posts/MathsPy
@@ -20,16 +20,16 @@ be the constant length of the <img src="https://latex.codecogs.com/svg.latex?\no
 We can compute <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;y_{k+1}"/> using the iterative equation.<b>
 <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;y_{k+1} = y_k + HF(y_k, t_k)"/>
 
-And this iterative equation is called the Explict euler formula.
+And this iterative equation is called the Explicit Euler formula.
 
 ## Implementation and Plots
-  Now let us see the implementation of explict euler formula using python.
+  Now let us see the implementation of the explicit Euler formula using Python.
  ```python
   """
 It takes partition boundaries-"a,b", the differential equation-"F", initial values-'c', and the step size-'h'
 as argument and returns the numerical solution.
 """
-def euler_explict(a, b, F, c, h):
+def euler_explicit(a, b, F, c, h):
     N = int((b-a)/h + 1)
     t = np.linspace(a, b, N)
     y = np.zeros((len(t), len(c0)))
@@ -114,7 +114,7 @@ And assigne the values of the parametrs and call our function.
 a, b = [0, 4]
 h = 0.01
 c = np.array([1, 1, 1])
-euler = euler_explict(a, b, model, c, h) # calling our function
+euler = euler_explicit(a, b, model, c, h) # calling our function
 x_e1 = euler[:,0]
 x_e2 = euler[:,1]
 x_e3 = euler[:,2]
@@ -127,9 +127,9 @@ print("\t      =================================================================
 print(f"\t   **  Plot of Exact solution, Approximate solution, and the error Using Explicit Euler **")
 print("\t      ==================================================================================\n")
 
-plot(t, x1t(t), x_e1, 'Euler explict', "Exact VS Explicit Euler for x1", abs(x1t(t) - x_e1))
-plot(t, x2t(t), x_e2, 'Euler explict', "Exact VS Explicit Euler for x2", abs(x2t(t) - x_e2))
-plot(t, x3t(t), x_e3, 'Euler explict', "Exact VS Explicit Euler for x3", abs(x3t(t) - x_e3))
+plot(t, x1t(t), x_e1, 'Explicit Euler', "Exact VS Explicit Euler for x1", abs(x1t(t) - x_e1))
+plot(t, x2t(t), x_e2, 'Explicit Euler', "Exact VS Explicit Euler for x2", abs(x2t(t) - x_e2))
+plot(t, x3t(t), x_e3, 'Explicit Euler', "Exact VS Explicit Euler for x3", abs(x3t(t) - x_e3))
 ```
 ![euler_explicit](https://github.com/luelhagos/luelhagos.github.io/blob/gh-pages/Figures/eu_ex.png?raw=true)
   
