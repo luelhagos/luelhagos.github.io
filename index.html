@@ -47,9 +47,7 @@
     (function() {
       let theme;
       try { theme = localStorage.getItem('theme'); } catch (e) {}
-      if (!theme) {
-        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
+      if (!theme) { theme = 'dark'; }
       document.documentElement.setAttribute('data-bs-theme', theme);
     })();
   </script>
@@ -102,7 +100,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h1>Luel Hagos Beyene</h1>
-            <p>I'm <span class="typed" data-typed-items="a Data Scientist, an NLP Enthusiast, chasing sunsets with a camera">a Data Scientist</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <p>I'm <span class="typed" data-typed-items="a Data Scientist, a Speech and NLP Researcher, a Duke MS Student">a Data Scientist</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
               <a href="https://www.linkedin.com/in/luel-hagos/" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
               <a href="https://github.com/luelhagos" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
@@ -125,11 +123,10 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-        <p>I have 3+ years of experience as a data scientist and hold a Master's degree in Mathematical Science
-          with a focus on Data Science, as well as a Bachelor's degree in Computer Science and Engineering. I'm
-          passionate about deep learning, data science, and natural language processing, with particular focus on
-          low-resource NLP, Supervised Fine-Tuning (SFT), Text-to-Speech, and Automatic Speech Recognition (ASR).
-          Driven by relentless curiosity, I strive to tackle new challenges and continuously evolve in this dynamic field.</p>
+        <p>I'm a data scientist and master's student in Data Science at Duke University. I have four years of experience
+          building production ML systems, from LLM-powered assistants and an MCP-based search agent to data pipelines on AWS.
+          My research focuses on low-resource languages: speech (TTS and ASR), LLM post-training and instruction fine-tuning,
+          and multilingual evaluation and benchmarks.</p>
       </div><!-- End Section Title -->
     </section><!-- /About Section -->
 
@@ -152,20 +149,19 @@
               </button>
             </h3>
             <div id="educationCollapse" class="collapse">
-              <div class="resume-item">
-                <h4 class="mb-1"><a href="https://esmt.berlin/" target="_blank" rel="noopener noreferrer">ESMT Berlin</a></h4>
-                <h5 class="mb-1 text-uppercase fw-bold">Business Management (Certificate)</h5>
-                <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Remote</span><span><i class="bi bi-calendar me-1"></i>2022</span></div>
+                <div class="resume-item">
+                <h4 class="mb-1"><a href="https://www.duke.edu/" target="_blank" rel="noopener noreferrer">Duke University</a></h4>
+                <h5 class="mb-1 text-uppercase fw-bold">Master's in Data Science</h5>
+                <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Durham, NC, USA</span><span>2026 – 2028 (expected)</span></div>
                 <ul class="mt-2">
-                  <li>Business management course offered by ESMT Berlin in collaboration with AIMS, Harvard Business Publishing, and the University of Victoria.</li>
-                  <li>Relevant courses: Leadership, Teamwork, Entrepreneurship, Data Analytics, and Design Thinking.</li>
+                  <li>Relevant courses: Modeling and Representation of Data, Data Engineering Systems, Natural Language Processing, Deep Learning.</li>
                 </ul>
               </div><!-- End Resume Item -->
 
               <div class="resume-item">
                 <h4 class="mb-1"><a href="https://aims.ac.rw/" target="_blank" rel="noopener noreferrer">African Institute for Mathematical Sciences (AIMS)</a></h4>
                 <h5 class="mb-1 text-uppercase fw-bold">MSc in Mathematical Science</h5>
-                <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Kigali, Rwanda</span><span><i class="bi bi-calendar me-1"></i>2022</span></div>
+                <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Kigali, Rwanda</span></div>
                 <ul class="mt-2">
                   <li>Major: Data Science</li>
                   <li>Grade: Distinction</li>
@@ -177,7 +173,7 @@
                 <h4 class="mb-1"><a href="https://www.mu.edu.et/" target="_blank" rel="noopener noreferrer"> Mekelle University - 
               Mekelle Institute of Technology</a></h4>
                 <h5 class="mb-1 text-uppercase fw-bold">BSc in Computer Science and Engineering</h5>
-                <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Mekelle, Ethiopia</span><span><i class="bi bi-calendar me-1"></i>2020</span></div>
+                <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Mekelle, Ethiopia</span></div>
                 <ul class="mt-2">
                   <li>Grade: Honors (3.77/4.0)</li>
                   <li>Relevant courses: Data Structures, Design and Analysis of Algorithms, Operating Systems, Microcontrollers, Compiler Design, Microprocessors, Cryptography and Network Security, Digital Signal Processing.</li>
@@ -256,7 +252,7 @@
               <div class="resume-item">
                 <h4 class="mb-1"><a href="https://www.facebook.com/tigraicodes/" target="_blank" rel="noopener noreferrer">TigraiCodes</a></h4>
                 <h5 class="mb-1 text-uppercase fw-bold">Co-Founder & Teaching Assistant</h5>
-                <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Mekelle, Ethiopia</span><span><i class="bi bi-calendar me-1"></i>Sep. 2019 – Present</span></div>
+                <div class="d-flex align-items-center text-muted"><span class="me-3"><i class="bi bi-geo-alt me-1"></i>Mekelle, Ethiopia</span><span><i class="bi bi-calendar me-1"></i>Sep. 2019 – Oct. 2020</span></div>
                 <ul class="mt-2">
                   <li>Co-founded an initiative to teach programming and computer science concepts to high school students.</li>
                 </ul>
@@ -306,7 +302,7 @@
                   <div class="text-muted"><i class="bi bi-geo-alt me-1"></i>Remote</div>
                 </div>
                 <h5 class="text-uppercase fw-bold mt-1">Data Scientist / Data Engineer</h5>
-                <span class="badge bg-light text-dark border mt-1"><i class="bi bi-calendar me-1"></i>Oct. 2022 – Present</span>
+                <span class="badge bg-light text-dark border mt-1"><i class="bi bi-calendar me-1"></i>Oct. 2022 – Aug. 2026</span>
                 <ul class="mt-3">
                   <li>Developed LLM-powered assistants to process and understand business documents.</li>
                   <li>Built an MCP-architected AI search agent backed by a vector database synced to a Strapi CMS on AWS, improving search efficiency by 80%.</li>
@@ -643,7 +639,7 @@
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
       <div class="copyright">
-        <span>Copyright</span> <strong class="px-1 sitename">Luel Hagos Beyene</strong> <span>All Rights Reserved</span>
+        <span>&copy; <span id="copyright-year">2026</span></span> <strong class="px-1 sitename">Luel Hagos Beyene</strong> <span>All Rights Reserved</span>
       </div>
       <div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
