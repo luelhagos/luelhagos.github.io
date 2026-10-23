@@ -34,10 +34,13 @@ header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
     HOME: /
     # PROJECTS: /projects/
-    ABOUT ME: /about/
+    ABOUT ME: /#about
     #Donate: https://laobubu.net/donate.html
 
 permalink: /archivers/:title
+exclude:
+ - themes
+ - portfolio_copy.html
 plugins:
  - jekyll-paginate
  - jekyll-gist
